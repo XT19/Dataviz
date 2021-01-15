@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>Les plus gros succès cinématographique</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=rNG0uObY1Zx-s17l2NAKOpzj2HoNG6WuhPgnNXJhG-pGelyQhv8BuVX_k8NV9Fk3y21lmx1NvVP_EhZeaevBNg" charset="UTF-8"></script><script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-map.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js"></script>
+    <script src="https://cdn.anychart.com/geodata/latest/custom/world/world.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <style>
+      html,
+      body,
+      #container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body class="d-flex flex-column">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" type="button">Les plus gros succès cinématographique</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a type="button" class="nav-link">BatchGeo (Carte)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" type="button">Infocaptor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" type="button">Rawgraphs 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" type="button">Rawgraphs 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" type="button">Tableau</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" type="button">Visuels</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="Content" style="width: 100%; height: 100%; margin-top: 20px"></div>
+  </body>
+  <script>
+    $(function () {
+      $("#Content").load("./acceuil.html");
+    });
+    $(".nav-link").click(function () {
+      console.log("clicked");
+      if ($(this).html().includes("BatchGeo (Carte)")) {
+        console.log("loaded");
+        $("#Content").load("./Carte.html");
+      }
+      if ($(this).html().includes("Infocaptor")) {
+        $("#Content").load("./Infocaptor.html");
+      }
+      if ($(this).html().includes("Rawgraphs 1")) {
+        $("#Content").load("./Rawgraphs1.html");
+      }
+      if ($(this).html().includes("Rawgraphs 2")) {
+        $("#Content").load("./Rawgraphs2.html");
+      }
+      if ($(this).html().includes("Tableau")) {
+        $("#Content").load("./Tableau.html");
+      }
+      if ($(this).html().includes("Visuels")) {
+        $("#Content").load("./Visuel.html");
+      }
+    });
+    $(".navbar-brand").click(function () {
+      $("#Content").load("./acceuil.html");
+    });
+  </script>
+</html>
