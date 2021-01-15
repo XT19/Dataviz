@@ -73,7 +73,7 @@ function imageZoom(imgID, resultID) {
     if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
     if (y < 0) {y = 0;}
     /*set the position of the lens:*/
-    lens.style.left = x + "px";
+    lens.style.left = x+665 + "px";
     lens.style.top = y + "px";
     /*display what the lens "sees":*/
     result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
@@ -105,9 +105,11 @@ function imageZoom(imgID, resultID) {
 
 
 <div class="img-zoom-container">
-  <img id="myimage" src="images/visuel/1_t.png" width="1300" height="700" style="margin-left: 5px;">
-  <img id="myimage2" src="images/visuel/barcode2.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%; margin-top: 30px; margin-bottom: 50px;">
+  <img id="myimage" src="images/visuel/1.png" style="display: block; margin-left: auto; margin-right: auto; width: 30%; height: 800px; margin-top: 20px; margin-bottom: 20px;">
+  <img id="myimage2" src="images/visuel/barcode2.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%; margin-top: 20px; margin-bottom: 20px;">
+  <img id="myimage3" src="images/visuel/3.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%; margin-top: 20px; margin-bottom: 20px;">
   <div id="myresult" class="img-zoom-result"></div>
+  
 </div>
 
 <script>
